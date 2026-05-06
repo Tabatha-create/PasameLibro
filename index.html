@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pásame un libro - Qué leo hoy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="img/plibro.png" alt="Pásame un libro – Qué leo hoy" class="logo-banner">
+    </header>
+        
+        <section class="hero">
+            <div class="hero-inner">
+                <h1>Tu espacio para descubrir, sentir y compartir lecturas</h1>
+                <p class="hero-sub">
+                    Un rincón cálido donde los libros encuentran a sus lectores.
+                </p>
+                <button class="hero-btn" onclick="irALibros()">Explorar recomendaciones</button>
+            </div>
+        </section>
+
+    <nav>
+        <button onclick="mostrar('libros')">Libros</button>
+        <button onclick="mostrar('textos')">Textos</button>
+        <button onclick="mostrar('grupos')">Grupos</button>
+    </nav>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- LIBROS -->
+    <section id="libros" class="active">
+      <h2>Libros recomendados</h2>
+
+      <div class="grid">
+        <div class="card-libro">
+          <img src="https://via.placeholder.com/300x450" alt="Portada libro">
+          <h3>Título del libro</h3>
+          <p>Autor/a</p>
+          <p>Breve descripción del libro para captar interés.</p>
+        </div>
+
+        <div class="card-libro">
+          <img src="https://via.placeholder.com/300x450" alt="Portada libro">
+          <h3>Otro libro</h3>
+          <p>Autor/a</p>
+          <p>Descripción breve del contenido.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEXTOS -->
+    <section id="textos">
+      <h2>Textos destacados</h2>
+
+      <div class="grid">
+        <div class="card-texto">
+          <h3>Título del texto</h3>
+          <p>Un fragmento o introducción del texto para invitar a leer más.</p>
+        </div>
+
+        <div class="card-texto">
+          <h3>Otro texto</h3>
+          <p>Descripción o frase destacada del contenido.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRUPOS -->
+    <section id="grupos">
+      <h2>Grupos de lectura</h2>
+
+      <div class="grid">
+        <div class="card-texto">
+          <h3>Club de lectura A</h3>
+          <p>Descripción del grupo, temática o dinámica.</p>
+        </div>
+
+        <div class="card-texto">
+          <h3>Club de lectura B</h3>
+          <p>Información del grupo y cómo unirse.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+  <div class="footer-content">
+    <img src="img/logo-circular.png" alt="Logo Pásame un libro" class="footer-logo">
+    <div class="footer-text">
+      <p>Pásame un libro – Qué leo hoy</p>
+      <p class="copyright">© 2026 · Todos los derechos reservados</p>
+    </div>
+  </div>
+</footer>
+
+
+
+  <!-- SCRIPT -->
+  <script>
+  function mostrar(id) {
+    document.querySelectorAll("main section").forEach(s => s.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
+
+  function irALibros() {
+    mostrar('libros');
+    document.getElementById('libros').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
