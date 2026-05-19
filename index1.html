@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pásame un libro - Qué leo hoy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Nunito:wght@300;400;600&family=Dancing+Script:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+    <header>
+        <img src="img/plibro.png" alt="Pásame un libro – Qué leo hoy" class="logo-banner">
+    </header>
+        
+    <section class="hero">
+        <div class="hero-inner">
+            <h1>Tu espacio para descubrir, sentir y compartir lecturas</h1>
+            <p class="hero-sub">Un rincón cálido donde los libros encuentran a sus lectores.</p>
+            <button class="hero-btn" onclick="irALibros()">Explorar recomendaciones</button>
+        </div>
+    </section>
+
+    <nav>
+        <button onclick="mostrar('libros')" class="nav-active">Libros</button>
+        <button onclick="mostrar('textos')">Textos</button>
+        <button onclick="mostrar('grupos')">Grupos</button>
+    </nav>
+
+  <main>
+
+    <!-- LIBROS -->
+    <section id="libros" class="active">
+      <h2>Libros recomendados</h2>
+
+      <div class="libros-grid">
+
+        <article class="card-libro">
+          <div class="libro-cover">
+            <img src="https://via.placeholder.com/200x300/A3B18A/ffffff?text=Libro" alt="Portada libro">
+          </div>
+          <div class="libro-info">
+            <span class="libro-genero">Novela</span>
+            <h3>Título del libro</h3>
+            <p class="libro-autor">Autor/a</p>
+            <p class="libro-desc">Breve descripción del libro para captar el interés del lector y animarle a descubrirlo.</p>
+            <button class="btn-secundario">Ver más</button>
+          </div>
+        </article>
+
+        <article class="card-libro">
+          <div class="libro-cover">
+            <img src="https://via.placeholder.com/200x300/D4A373/ffffff?text=Libro" alt="Portada libro">
+          </div>
+          <div class="libro-info">
+            <span class="libro-genero">Ensayo</span>
+            <h3>Otro libro</h3>
+            <p class="libro-autor">Autor/a</p>
+            <p class="libro-desc">Descripción breve del contenido que despierte la curiosidad del lector.</p>
+            <button class="btn-secundario">Ver más</button>
+          </div>
+        </article>
+
+        <article class="card-libro">
+          <div class="libro-cover">
+            <img src="https://via.placeholder.com/200x300/344E41/ffffff?text=Libro" alt="Portada libro">
+          </div>
+          <div class="libro-info">
+            <span class="libro-genero">Poesía</span>
+            <h3>Un tercer libro</h3>
+            <p class="libro-autor">Autor/a</p>
+            <p class="libro-desc">Una obra que no puedes dejar pasar si te apasiona la literatura contemporánea.</p>
+            <button class="btn-secundario">Ver más</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- TEXTOS -->
+    <section id="textos">
+      <h2>Textos destacados</h2>
+
+      <div class="textos-grid">
+        <article class="card-texto">
+          <span class="texto-tipo">Fragmento</span>
+          <h3>Título del texto</h3>
+          <blockquote>«Un fragmento o introducción del texto para invitar a leer más y descubrir su belleza.»</blockquote>
+          <p class="texto-origen">— Autor, <em>Nombre de la obra</em></p>
+        </article>
+
+        <article class="card-texto card-texto--featured">
+          <span class="texto-tipo">Reseña</span>
+          <h3>Otro texto</h3>
+          <blockquote>«Descripción o frase destacada del contenido que resuma la esencia de esta lectura.»</blockquote>
+          <p class="texto-origen">— Autor, <em>Nombre de la obra</em></p>
+        </article>
+
+        <article class="card-texto">
+          <span class="texto-tipo">Poema</span>
+          <h3>Un poema breve</h3>
+          <blockquote>«Versos que resuenan y se quedan grabados mucho después de haberlos leído.»</blockquote>
+          <p class="texto-origen">— Autor, <em>Nombre de la obra</em></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- GRUPOS -->
+    <section id="grupos">
+      <h2>Grupos de lectura</h2>
+
+      <div class="grupos-grid">
+        <article class="card-grupo">
+          <div class="grupo-header">
+            <span class="grupo-emoji">📚</span>
+            <span class="grupo-badge">12 miembros</span>
+          </div>
+          <h3>Club de lectura A</h3>
+          <p>Descripción del grupo, temática o dinámica de encuentro. Nos reunimos cada dos semanas.</p>
+          <button class="btn-grupo">Unirse al grupo</button>
+        </article>
+
+        <article class="card-grupo card-grupo--accent">
+          <div class="grupo-header">
+            <span class="grupo-emoji">🌿</span>
+            <span class="grupo-badge">8 miembros</span>
+          </div>
+          <h3>Club de lectura B</h3>
+          <p>Información del grupo y cómo unirse. Exploramos narrativa contemporánea en español.</p>
+          <button class="btn-grupo">Unirse al grupo</button>
+        </article>
+
+        <article class="card-grupo">
+          <div class="grupo-header">
+            <span class="grupo-emoji">✍️</span>
+            <span class="grupo-badge">5 miembros</span>
+          </div>
+          <h3>Taller de escritura</h3>
+          <p>No solo leemos, también escribimos. Comparte tus textos y recibe feedback amoroso.</p>
+          <button class="btn-grupo">Unirse al grupo</button>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <img src="img/logo-circular.png" alt="Logo Pásame un libro" class="footer-logo">
+      <div class="footer-text">
+        <p>Pásame un libro – Qué leo hoy</p>
+        <p class="copyright">© 2026 · Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  function mostrar(id) {
+    document.querySelectorAll("main section").forEach(s => s.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+    document.querySelectorAll("nav button").forEach(b => b.classList.remove("nav-active"));
+    event.target.classList.add("nav-active");
+  }
+
+  function irALibros() {
+    mostrar('libros');
+    document.getElementById('libros').scrollIntoView({ behavior: 'smooth' });
+  }
+  </script>
+
+</body>
+</html>
